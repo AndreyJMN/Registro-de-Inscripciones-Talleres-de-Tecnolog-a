@@ -1,31 +1,61 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+/* GENERAL */
 body {
-  margin-bottom: 60px;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa !important;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+/* TITULOS */
+h1, h2, h3 {
+    font-weight: 700;
+    color: #000;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+/* TARJETAS */
+.card {
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+}
+
+.card-body h2 {
+    color: #111;
+}
+
+/* BOTONES  */
+.btn-black {
+    background-color: #000 !important;
+    color: #fff !important;
+    border-radius: 6px !important;
+    transition: 0.2s;
+}
+
+    .btn-black:hover {
+        background-color: #333 !important;
+    }
+
+.btn-outline-black {
+    border: 2px solid #000 !important;
+    color: #000 !important;
+}
+
+    .btn-outline-black:hover {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+
+/* TABLAS */
+table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table thead {
+    background: #000;
+    color: white;
+}
+
+/* FORM LABEL */
+.form-label {
+    font-weight: 600;
+    color: #111;
 }

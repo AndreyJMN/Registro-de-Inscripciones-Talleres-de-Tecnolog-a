@@ -1,20 +1,22 @@
-﻿using Registro_de_Inscripciones___Talleres_de_Tecnología.Models;
+﻿using System.Collections.Generic;
+using Registro_de_Inscripciones___Talleres_de_Tecnología.Models;
 
 namespace Registro_de_Inscripciones___Talleres_de_Tecnología.Data
 {
-    public class InscripcionRepository
+    public static class InscripcionRepository
     {
-        private static readonly List<Inscripcion> _inscripciones = new();
-
+        private static List<Inscripcion> _inscripciones = new List<Inscripcion>();
         private static int _nextId = 1;
 
-        public static IReadOnlyList<Inscripcion> ObtenerInscripciones() => _inscripciones.AsReadOnly();
-
-        public static void Agregar(Inscripcion p)
+        public static void AgregarInscripcion(Inscripcion inscripcion)
         {
-            p.Id = _nextId++;
-            _inscripciones.Add(p);
+            inscripcion.Id = _nextId++;
+            _inscripciones.Add(inscripcion);
         }
 
+        public static List<Inscripcion> ObtenerInscripciones()
+        {
+            return _inscripciones;
+        }
     }
 }
